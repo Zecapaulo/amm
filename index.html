@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amm - Solução a cada gota</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="font.css" rel="stylesheet">
+    <!-- Importação das Fontes (Adicione a Satisfy) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container navbar-custom-container">
+            <a class="navbar-brand" href="#">
+                <img src="logo-amm.png" alt="Amm Logo" class="navbar-logo">
+            </a>
+
+            <div class="navbar-pill-container d-flex align-items-center">
+                <button class="navbar-toggler border-0 shadow-none me-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav header-nav-list">
+                        <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Qualidade</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                    </ul>
+                </div>
+
+                <a href="wa.me/+258841636187" class="btn btn-fale-conosco-pill">
+                    Fale Conosco <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="hero-title">Solução a <br><span class="font-script">cada gota!</span></h1>
+                    <p class="lead text-muted my-4">
+                        Detergentes eficientes, fragrâncias irresistíveis e qualidade que você sente na limpeza todos os
+                        dias.
+                    </p>
+                    <!-- BLOCO DE BOTÕES DO HERO -->
+                    <div class="d-flex flex-wrap gap-3 mb-4 alignment-hero-btns">
+                        <button class="btn btn-amm-primary">
+                            <span class="play-circle"><i class="fa-solid fa-play"></i></span>
+                            Conheça nossos produtos
+                        </button>
+                        <button class="btn btn-amm-secondary">
+                            <i class="fa-brands fa-whatsapp"></i> Fale com nossa equipe
+                        </button>
+                    </div>
+
+                    <!-- CÁPSULA DE BENEFÍCIOS ULTRA-PRECISA (IGUAL À IMAGEM 1) -->
+                    <div class="hero-badges-capsule">
+                        <div class="badge-item">
+                            <!-- Gota Vazada -->
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e31c24"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-13-7-13S5 10.7 5 15a7 7 0 0 0 7 7z" />
+                            </svg>
+                            <span>Alta <br> Performance</span>
+                        </div>
+                        <div class="badge-item">
+                            <!-- Brilhos Vazados -->
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e31c24"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M12 3v4M12 17v4M3 12h4M17 12h4M5.3 5.3l2.8 2.8M15.9 15.9l2.8 2.8M5.3 18.7l2.8-2.8M15.9 8.1l2.8-2.8" />
+                            </svg>
+                            <span>Rende <br> Mais</span>
+                        </div>
+                        <div class="badge-item">
+                            <!-- Rosácea/Flor Geométrica de Perfume -->
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e31c24"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M12 2a4.5 4.5 0 0 0-4.5 4.5C7.5 9 12 12 12 12s4.5-3 4.5-5.5A4.5 4.5 0 0 0 12 2zM12 22a4.5 4.5 0 0 0 4.5-4.5c0-2.5-4.5-5.5-4.5-5.5s-4.5 3-4.5 5.5A4.5 4.5 0 0 0 12 22zM2 12a4.5 4.5 0 0 0 4.5 4.5c2.5 0 5.5-4.5 5.5-4.5s-3-4.5-5.5-4.5A4.5 4.5 0 0 0 2 12zM22 12a4.5 4.5 0 0 0-4.5-4.5c-2.5 0-5.5 4.5-5.5 4.5s3 4.5 5.5 4.5A4.5 4.5 0 0 0 22 12z" />
+                            </svg>
+                            <span>Perfumes <br> que Encantam</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center position-relative d-none d-lg-block">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SEÇÃO QUEM SOMOS - INTEGRADA EM CARD FLUTUANTE (IGUAL À IMAGEM 2) -->
+    <section class="quem-somos-section-container">
+        <div class="container">
+            <div class="quem-somos-master-card">
+                <div class="row align-items-center g-4">
+
+                    <!-- Coluna de Texto (Esquerda) -->
+                    <div class="col-lg-5">
+                        <span class="section-title-tag mb-3">Quem Somos</span>
+                        <h2 class="quem-somos-title mb-3">
+                            Muito mais que limpeza, é <span class="font-script-highlight">cuidado</span> em cada
+                            detalhe.
+                        </h2>
+                        <p class="quem-somos-text">
+                            Na Amm, desenvolvemos soluções de limpeza que transformam o dia a dia, levando eficiência,
+                            perfume e bem-estar para sua casa e seu carro.
+                        </p>
+                    </div>
+
+                    <!-- Coluna dos 4 Mini-Cards (Direita) -->
+                    <div class="col-lg-7">
+                        <div class="row row-cols-2 row-cols-sm-4 g-3">
+
+                            <!-- Card 1 -->
+                            <div class="col">
+                                <div class="benefit-sub-card">
+                                    <div class="icon-circle bg-gradient-red">
+                                        <i class="fa-solid fa-industry"></i>
+                                    </div>
+                                    <h6>Fabricação Própria</h6>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="col">
+                                <div class="benefit-sub-card">
+                                    <div class="icon-circle bg-gradient-orange">
+                                        <i class="fa-solid fa-flask"></i>
+                                    </div>
+                                    <h6>Fórmulas Testadas</h6>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="col">
+                                <div class="benefit-sub-card">
+                                    <div class="icon-circle bg-gradient-pink">
+                                        <i class="fa-solid fa-award"></i>
+                                    </div>
+                                    <h6>Qualidade Garantida</h6>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="col">
+                                <div class="benefit-sub-card">
+                                    <div class="icon-circle bg-gradient-amber">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <h6>Satisfação Comprovada</h6>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container text-center py-3 position-relative">
+            <span class="section-title-tag">Nossos Produtos</span>
+            <h2 class="fw-bold mt-2 mb-5">Escolha o seu favorito</h2>
+
+            <div class="products-carousel-container">
+
+                <div class="products-slider" id="productSlider">
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod1.png" alt="Limpa Tudo Lavanda" class="img-fluid">
+                            <div class="product-title">Limpa tudo Blueberry</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod2.png" alt="Limpa Tudo Tutti Fruit" class="img-fluid">
+                            <div class="product-title">Limpa Tudo Lavanda</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod3.png" alt="Limpa Tudo Maçã" class="img-fluid">
+                            <div class="product-title">Limpa Tudo Tutti Fruit</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod4.png" alt="Limpa Tudo Blueberry" class="img-fluid">
+                            <div class="product-title">Limpa Tudo Limão</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod5.png" alt="Limpa Tudo Lavanda" class="img-fluid">
+                            <div class="product-title">Limpa Tudo Rosey</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod10.png" alt="Limpa Tudo Blueberry" class="img-fluid">
+                            <div class="product-title">Shampoo Auto</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod6.png" alt="Limpa Tudo Tutti Fruit" class="img-fluid">
+                            <div class="product-title">Javel Lixivia</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod7.png" alt="Shampoo Auto" class="img-fluid">
+                            <div class="product-title">Desentupidor de Canos</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod8.png" alt="Limpa Tudo Limão" class="img-fluid">
+                            <div class="product-title">Acido Sais de Espirito</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod9.png" alt="Limpa Tudo Maçã" class="img-fluid">
+                            <div class="product-title">Limpa Vidros</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="products-carousel-container">
+
+                <button class="carousel-control-prev amm-slider-btn" id="prevBtn" aria-label="Anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="carousel-control-next amm-slider-btn" id="nextBtn" aria-label="Próximo">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div class="products-slider" id="productSlider">
+
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod11.png" alt="Limpa Tudo Lavanda" class="img-fluid">
+                            <div class="product-title">Gel Pinho</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod12.png" alt="Limpa Tudo Tutti Fruit" class="img-fluid">
+                            <div class="product-title">Sabão Liquido Limão</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod13.png" alt="Shampoo Auto" class="img-fluid">
+                            <div class="product-title">Alcool Etilico</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod14.png" alt="Limpa Tudo Limão" class="img-fluid">
+                            <div class="product-title">Handy Creamy</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod15.png" alt="Limpa Tudo Rosey" class="img-fluid">
+                            <div class="product-title">Acido sais de espirito</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod16.png" alt="Limpa Tudo Maçã" class="img-fluid">
+                            <div class="product-title">Sabonete das Maos</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod17.png" alt="Limpa Tudo Fresh Top" class="img-fluid">
+                            <div class="product-title">Javel Lixivia concentrado</div>
+                        </div>
+                    </div>
+
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod18.png" alt="Limpa Tudo Blueberry" class="img-fluid">
+                            <div class="product-title">Cloro em Gel</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod19.png" alt="Limpa Tudo Blueberry" class="img-fluid">
+                            <div class="product-title">Limpa tudo Top Fresh</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod20.png" alt="Limpa Tudo Blueberry" class="img-fluid">
+                            <div class="product-title">Sabão Liquido Concentrado</div>
+                        </div>
+                    </div>
+                    <div class="product-slide-item">
+                        <div class="product-grid-item">
+                            <img src="prod21.png" alt="Limpa Tudo Blueberry" class="img-fluid">
+                            <div class="product-title">Sabão Liquido</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <a href="products.html" class="btn btn-amm-primary px-4">Ver todos os produtos <i
+                        class="fa-solid fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <section class="why-choose-section">
+            <div class="row align-items-center">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <span class="text-white-50 text-uppercase fw-bold small">Por que escolher a Amm?</span>
+                    <h2 class="fw-bold text-white mt-2 mb-3" style="font-size: 2.3rem;">Qualidade que você <span
+                            class="font-script text-white" style="font-size:1.1em;">sente.</span></h2>
+                    <p class="text-white-50 m-0 small">Cada gota dos nossos produtos é pensada para entregar o melhor
+                        resultado com economia e segurança.</p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row g-4 text-center text-sm-start">
+                        <div class="col-sm-6">
+                            <div class="why-icon-box"><i class="fa-solid fa-droplet-slash"></i></div>
+                            <h5 class="fw-bold">Fórmulas Eficientes</h5>
+                            <p class="text-white-50 small">Limpeza profunda com alto poder desengordurante.</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="why-icon-box"><i class="fa-solid fa-wind"></i></div>
+                            <h5 class="fw-bold">Fragrâncias Duradouras</h5>
+                            <p class="text-white-50 small">Perfumes que deixam um toque especial no ambiente.</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="why-icon-box"><i class="fa-solid fa-piggy-bank"></i></div>
+                            <h5 class="fw-bold">Rende Mais</h5>
+                            <p class="text-white-50 small">Mais economia para o seu bolso.</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="why-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h5 class="fw-bold">Segurança em cada gota</h5>
+                            <p class="text-white-50 small">Produtos testados e aprovados para o uso diário.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container my-5">
+        <section class="sustentabilidade-banner">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h3 class="fw-bold text-success mb-3">
+                        <i class="fa-solid fa-leaf me-2"></i>Compromisso com o <span class="text-dark">meio
+                            ambiente</span>
+                    </h3>
+                    <p class="text-muted small mb-4">
+                        Desenvolvemos produtos que cuidam da sua casa e também do planeta. Mais eficiência, menos
+                        impacto.
+                    </p>
+                    <button class="btn btn-green">Saiba mais <i
+                            class="fa-solid fa-chevron-right ms-2 small"></i></button>
+                </div>
+                <div class="col-md-5 text-end d-none d-md-block">
+                    <img src="eco-globe.png" alt="Sustentabilidade Amm" class="img-fluid">
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="testemunhos-novidades-section bg-white py-5">
+        <div class="container">
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="stats-card-amm">
+                        <div class="row row-cols-2 row-cols-md-4 g-4 text-center">
+
+                            <div class="col">
+                                <div class="stat-item">
+                                    <div class="stat-icon-wrapper mb-2">
+                                        <i class="fa-solid fa-ribbon"></i>
+                                    </div>
+                                    <h3 class="stat-number">+20</h3>
+                                    <p class="stat-text">Anos de história</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="stat-item">
+                                    <div class="stat-icon-wrapper mb-2">
+                                        <i class="fa-solid fa-clipboard-list"></i>
+                                    </div>
+                                    <h3 class="stat-number">+100</h3>
+                                    <p class="stat-text">Produtos desenvolvidos</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="stat-item">
+                                    <div class="stat-icon-wrapper mb-2">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                    <h3 class="stat-number">+10K</h3>
+                                    <p class="stat-text">Clientes satisfeitos</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="stat-item">
+                                    <div class="stat-icon-wrapper mb-2">
+                                        <i class="fa-solid fa-check-circle"></i>
+                                    </div>
+                                    <h3 class="stat-number">100%</h3>
+                                    <p class="stat-text">Comprometidos</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mb-5 mt-5 pt-4">
+                <h2 class="title-with-line">O que nossos clientes dizem</h2>
+            </div>
+
+            <div class="row row-cols-1 row-cols-lg-3 g-4 mb-5 pb-5">
+
+                <div class="col">
+                    <div class="testimonial-card-amm">
+                        <p class="quote-text">
+                            "Produtos de excelente qualidade! O Limpa tudo realmente faz jus ao nome. Uso e recomendo!"
+                        </p>
+                        <div class="rating mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="author-meta d-flex align-items-center">
+                            <img src="https://via.placeholder.com/60" alt="Maria Silva"
+                                class="author-img rounded-circle me-3">
+                            <div class="author-info">
+                                <h6 class="author-name mb-0">Maria Silva</h6>
+                                <p class="author-location mb-0">São Paulo, SP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial-card-amm">
+                        <p class="quote-text">
+                            "A fragrância dura muito e a limpeza é impecável. Meus produtos favoritos são os de
+                            lavanda."
+                        </p>
+                        <div class="rating mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="author-meta d-flex align-items-center">
+                            <img src="https://via.placeholder.com/60" alt="João Santos"
+                                class="author-img rounded-circle me-3">
+                            <div class="author-info">
+                                <h6 class="author-name mb-0">João Santos</h6>
+                                <p class="author-location mb-0">Rio de Janeiro, RJ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial-card-amm">
+                        <p class="quote-text">
+                            "Empresa que se preocupa com o meio ambiente e entrega produtos incríveis. Parabéns!"
+                        </p>
+                        <div class="rating mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="author-meta d-flex align-items-center">
+                            <img src="https://via.placeholder.com/60" alt="Ana Costa"
+                                class="author-img rounded-circle me-3">
+                            <div class="author-info">
+                                <h6 class="author-name mb-0">Ana Costa</h6>
+                                <p class="author-location mb-0">Belo Horizonte, MG</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mb-5">
+                <div class="pagination-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4">
+                <div class="col-12">
+                    <div class="newsletter-card-amm">
+                        <div class="row align-items-center text-center text-md-start">
+                            <div class="col-md-7 mb-4 mb-md-0">
+                                <h2 class="newsletter-title text-white">Fique por dentro das novidades!</h2>
+                                <p class="newsletter-desc text-white-50">Receba dicas de limpeza, lançamentos e
+                                    promoções exclusivos.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <form class="newsletter-form">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" placeholder="Seu melhor e-mail"
+                                            aria-label="Seu melhor e-mail" required>
+                                        <button class="btn btn-newsletter" type="submit">Inscrever-se <i
+                                                class="fa-solid fa-paper-plane ms-2"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row align-items-center mb-4 pb-4 border-bottom-custom">
+                <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
+                    <h2 class="footer-cta-title text-white fw-bold">
+                        A solução ideal está <br class="d-none d-md-inline"> a uma <span
+                            class="footer-font-script">gota</span> de distância!
+                    </h2>
+                    <p class="footer-cta-desc text-white-50 m-0">
+                        Fale com nossa equipe e descubra a melhor solução em limpeza para você.
+                    </p>
+                </div>
+                <div class="col-lg-5 d-flex flex-column gap-3 align-items-center align-items-lg-end">
+                    <a href="wa.me/+258841636187" class="btn-footer-whatsapp">
+                        <i class="fa-brands fa-whatsapp me-2"></i> Fale com nossa equipe
+                    </a>
+                    <a href="#" class="btn-footer-phone">
+                        <i class="fa-solid fa-phone me-2"></i> (+258) 85 36 66 986 / (+258) 84 16 36 187
+                    </a>
+                </div>
+            </div>
+
+            <div class="row align-items-start g-4 pt-2">
+                <div class="col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
+                    <img src="logo-amm.png" alt="Amm Logo" class="footer-logo">
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3 text-center text-sm-start">
+                        <div class="col-4 col-sm-4">
+                            <h6 class="footer-heading">Navegação</h6>
+                            <div class="d-flex flex-column gap-2">
+                                <a href="#" class="footer-link">Início</a>
+                                <a href="#" class="footer-link">Produtos</a>
+                                <a href="#" class="footer-link">Sobre Nós</a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-4">
+                            <h6 class="footer-heading">Institucional</h6>
+                            <div class="d-flex flex-column gap-2">
+                                <a href="#" class="footer-link">Qualidade</a>
+                                <a href="#" class="footer-link">Sustentabilidade</a>
+                                <a href="#" class="footer-link">Trabalhe Conosco</a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-4">
+                            <h6 class="footer-heading">Ajuda</h6>
+                            <div class="d-flex flex-column gap-2">
+                                <a href="#" class="footer-link">Perguntas Frequentes</a>
+                                <a href="#" class="footer-link">Política de Privacidade</a>
+                                <a href="#" class="footer-link">Termos de Uso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center text-lg-end">
+                    <h6 class="footer-heading mb-3">Siga-nos</h6>
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4 pt-3">
+                <div class="col-12 text-center text-lg-start">
+                    <p class="footer-copyright-text m-0">© 2024 Amm Solução a Cada Gota. Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

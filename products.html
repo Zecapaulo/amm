@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amm - Catálogo de Produtos</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container navbar-custom-container">
+            <a class="navbar-brand" href="#">
+                <img src="logo-amm.png" alt="Amm Logo" class="navbar-logo">
+            </a>
+
+            <div class="navbar-pill-container d-flex align-items-center">
+                <button class="navbar-toggler border-0 shadow-none me-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav header-nav-list">
+                        <li class="nav-item"><a class="nav-link " href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="products.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Qualidade</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contato<i
+                                    class="mdi mdi-message-text"></i></a></li>
+                    </ul>
+                </div>
+
+                <button class="cart-btn" id="cartBtn" aria-label="Abrir carrinho">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="products-hero-section text-center pt-5 mt-5 pb-4">
+        <div class="container mt-4">
+            <h1 class="hero-title mb-2" style="font-size: 2.5rem;">Faça o seu <span class="font-script">Pedido</span>
+            </h1>
+            <p class="sub-hero-text mx-auto mb-0" style="max-width: 600px;">
+                Adicione os produtos ao carrinho, preencha seus dados e envie o pedido diretamente para o nosso
+                WhatsApp.
+            </p>
+        </div>
+    </section>
+
+    <section class="container mb-4">
+        <div class="filter-bar-wrapper bg-white p-3 rounded-4 shadow-sm">
+            <div class="row align-items-center g-3">
+                <div class="col-lg-12">
+                    <div class="input-group search-input-group px-2 py-1">
+                        <span class="input-group-text bg-transparent border-0 text-muted">
+                            <i class="mdi mdi-message-text"></i>
+                        </span>
+                        <input type="text" id="productSearch" class="form-control border-0 bg-transparent"
+                            placeholder="Buscar produto ou aroma...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5 pb-5">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-md-4" id="productsGrid">
+        </div>
+
+        <div id="noProductsFound" class="d-none text-center py-5 mt-4 bg-white rounded-4 shadow-sm border">
+            <div class="mb-3" style="font-size: 3rem; color: #dee2e6;">
+                <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h3 class="fw-bold" style="color: #1a1a1a;">Nenhum produto encontrado</h3>
+            <p class="text-muted">Tente buscar por um termo diferente ou mude a categoria acima.</p>
+        </div>
+    </section>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel"
+        style="z-index: 10000 !important;">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel">
+                <i class="fa-solid fa-cart-shopping text-danger me-2"></i> Seu Pedido
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column p-0">
+
+            <div id="cartItemsContainer" class="flex-grow-1 overflow-auto p-3 bg-light">
+                <div class="text-center text-muted mt-5">
+                    <i class="fa-solid fa-basket-shopping fs-1 mb-3 opacity-50"></i>
+                    <p>O seu carrinho está vazio.</p>
+                </div>
+            </div>
+
+            <div class="border-top bg-white p-3 shadow-sm">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-semibold text-muted">Subtotal:</span>
+                    <span class="fw-bold fs-5" id="cartSubtotal">0 MT</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3 border-bottom pb-2">
+                    <span class="fw-bold text-dark">Total Geral (Com IVA):</span>
+                    <span class="fw-bold fs-4 text-danger" id="cartTotal">0 MT</span>
+                </div>
+
+                <h6 class="fw-bold mb-3 text-dark">Dados para Entrega / Faturação</h6>
+                <div class="mb-2">
+                    <input type="text" id="clientName" class="form-control form-control-sm"
+                        placeholder="Nome Completo *" required>
+                </div>
+                <div class="mb-2">
+                    <input type="text" id="clientPhone" class="form-control form-control-sm"
+                        placeholder="Telefone / WhatsApp *" required>
+                </div>
+                <div class="mb-2">
+                    <input type="text" id="clientCompany" class="form-control form-control-sm"
+                        placeholder="Empresa (Opcional)">
+                </div>
+                <div class="mb-3">
+                    <textarea id="clientNotes" class="form-control form-control-sm" rows="2"
+                        placeholder="Observações (Opcional)"></textarea>
+                </div>
+
+                <button
+                    class="btn btn-success w-100 fw-bold py-2 d-flex align-items-center justify-content-center gap-2"
+                    onclick="processCheckout()">
+                    <i class="fa-brands fa-whatsapp fs-5"></i> Finalizar no WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row align-items-center mb-4 pb-4 border-bottom-custom">
+                <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
+                    <h2 class="footer-cta-title text-white fw-bold">
+                        A solução ideal está <br class="d-none d-md-inline"> a uma <span
+                            class="footer-font-script">gota</span> de distância!
+                    </h2>
+                    <p class="footer-cta-desc text-white-50 m-0">
+                        Fale com nossa equipe e descubra a melhor solução em limpeza para você.
+                    </p>
+                </div>
+                <div class="col-lg-5 d-flex flex-column gap-3 align-items-center align-items-lg-end">
+                    <a href="wa.me/+258841636187" class="btn-footer-whatsapp">
+                        <i class="fa-brands fa-whatsapp me-2"></i> Fale com nossa equipe
+                    </a>
+                    <a href="#" class="btn-footer-phone">
+                        <i class="fa-solid fa-phone me-2"></i> (+258) 85 36 66 986 / (+258) 84 16 36 187
+                    </a>
+                </div>
+            </div>
+
+            <div class="row align-items-start g-4 pt-2">
+                <div class="col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
+                    <img src="logo-amm.png" alt="Amm Logo" class="footer-logo">
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3 text-center text-sm-start">
+                        <div class="col-4 col-sm-4">
+                            <h6 class="footer-heading">Navegação</h6>
+                            <div class="d-flex flex-column gap-2">
+                                <a href="#" class="footer-link">Início</a>
+                                <a href="#" class="footer-link">Produtos</a>
+                                <a href="#" class="footer-link">Sobre Nós</a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-4">
+                            <h6 class="footer-heading">Institucional</h6>
+                            <div class="d-flex flex-column gap-2">
+                                <a href="#" class="footer-link">Qualidade</a>
+                                <a href="#" class="footer-link">Sustentabilidade</a>
+                                <a href="#" class="footer-link">Trabalhe Conosco</a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-4">
+                            <h6 class="footer-heading">Ajuda</h6>
+                            <div class="d-flex flex-column gap-2">
+                                <a href="#" class="footer-link">Perguntas Frequentes</a>
+                                <a href="#" class="footer-link">Política de Privacidade</a>
+                                <a href="#" class="footer-link">Termos de Uso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center text-lg-end">
+                    <h6 class="footer-heading mb-3">Siga-nos</h6>
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4 pt-3">
+                <div class="col-12 text-center text-lg-start">
+                    <p class="footer-copyright-text m-0">© 2024 Amm Solução a Cada Gota. Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="products.js"></script>
+</body>
+
+</html>
