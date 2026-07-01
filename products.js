@@ -332,7 +332,7 @@ const productsDatabase = [
   {
     id: 37,
     name: "SHAMPO AUTO 5L",
-    img: "prod10.png",
+    img: "prod40.png",
     category: "auto",
     qtyBox: 4,
     priceUnit: 450,
